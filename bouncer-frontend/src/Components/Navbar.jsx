@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import Logoimg from "../assets/LOGO.jpg";
 import { Link } from "react-router-dom";
-import Profile from "../pages/Profile";
+import Profile from "../pages/Profile"; // Profile icon component
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,8 +19,17 @@ function Navbar() {
           />
         </Link>
 
-        {/* Desktop Profile */}
-        <div className="hidden md:flex items-center space-x-4">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-6">
+          {/* Information link */}
+          <Link
+            to="/information"
+            className="hover:text-gray-300 transition-colors duration-200 text-lg"
+          >
+           My Information
+          </Link>
+
+          {/* Profile icon */}
           <Profile />
         </div>
 
@@ -38,14 +47,20 @@ function Navbar() {
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
-      <div className="px-5 py-4 flex items-center justify-between border-b border-lightGray ">
+        <div className="px-5 py-4 flex items-center justify-between border-b border-lightGray ">
           <img src={Logoimg} alt="Logo" className="w-10 h-10 rounded-full" />
-          <button onClick={() => setMenuOpen(false)} className="text-2xl">
-            <HiX />
-          </button>
         </div>
 
-        <ul className="flex flex-col mt-4 px-6">
+        <ul className="flex flex-col mt-4 px-6 space-y-4">
+          <li>
+            <Link
+              to="/information"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-gray-300 transition-colors duration-200 text-lg"
+            >
+             My Information
+            </Link>
+          </li>
           <li>
             <Profile onClick={() => setMenuOpen(false)} />
           </li>

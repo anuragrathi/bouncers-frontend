@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OauthSuccess from "../Components/oauthSuccess";
 import App from "../App";
 import Home from "../pages/Home";
-
+import InformationPage from "../pages/InformationPage";
 import Register from "../pages/AuthPages/Register";
 import Login from "../pages/AuthPages/Login";
 
@@ -37,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage/>
+      },
+      {
+        path: "/information",
+        element: <InformationPage/>
       },
     ]
   }

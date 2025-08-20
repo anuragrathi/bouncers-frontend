@@ -91,7 +91,7 @@ function Login() {
         <button
           type="button"
           onClick={handleGoogleLogin}
-          className="w-full mt-3 hover:bg-lightGray text-black font-semibold py-3 rounded-md transition duration-300 flex items-center justify-center space-x-2 border border-gray"
+          className="w-full mt-3 hover:bg-[#8F9991] text-black font-semibold py-3 rounded-md transition duration-300 flex items-center justify-center space-x-2 border border-gray"
         >
           <FcGoogle className="text-xl" />
           <span>Sign in with Google</span>
@@ -110,7 +110,7 @@ function Login() {
 
       <p className="mt-4">
         Don't have an account?{" "}
-        <Link to="/sign-up" className="text-red hover:underline">
+        <Link to="/sign-up" className="text-red-600 hover:underline">
           Register
         </Link>
       </p>
