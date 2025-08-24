@@ -79,7 +79,7 @@ function Register() {
 
         <button
           type="submit"
-          className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 rounded-md transition duration-300"
+          className="w-full bg-black hover:bg-[#3b3e3c] text-white font-semibold py-3 rounded-md transition duration-300"
         >
           Sign Up
         </button>
